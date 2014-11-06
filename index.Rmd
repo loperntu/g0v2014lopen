@@ -121,6 +121,19 @@ How inconvenient is that !?!
 Can't you just use the transcription of Taiwanese sound to input 漢字 ?!?
 
 
+---
+## 台語輸入 TaigiIME: A story from A-Tsioh
+
+> I had the idea, but was missing the Data.... and MOE.cc found!!
+> If the MOE had selected a too restrictive licence, the APP would never had made its way up to the Google Play Store, and now with the status of downloaded more than 10.000 times ! <https://github.com/a-tsioh/TaigIME-android/>
+
+<img class='center'src="assets/img/taigiIME.png" alt="Drawing" style="width: 400px; height：200px"/>
+
+
+
+- sadly no pull requests yet
+- but quite a lot of feedback for a single man ! (I wish I had more time to spend on it)
+
 
 ---
 ## Linked Linguistic Data Movement 
@@ -281,7 +294,10 @@ slidifyUI(
 
 
 * <img class='center'src="assets/img/hacker.png" alt="Drawing" style="width: 350px; height：150px"/>
-* 眾籌眾包眾什麼都好 Crowd (found|sourc)ing language resources for Taiwan.
+
+* Bridge the gap between the labs and the people !
+
+* 眾籌眾包眾什麼都歡迎 Crowd (found|sourc)ing language resources for Taiwan.
 
 
 ---
