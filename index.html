@@ -60,7 +60,7 @@
   <article data-timings="">
     <ol>
 <li>語言學和開放政府的關係</li>
-<li>開放語料的意義與實作</li>
+<li>開放語料的意義與實作架構</li>
 <li>開放語料的未來芻議</li>
 </ol>
 
@@ -88,7 +88,8 @@
     <h1>2 分鐘背景知識</h1>
   </hgroup>
   <article data-timings="">
-    
+    <h3>2 minutes Linguistics</h3>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -100,8 +101,8 @@
   <article data-timings="">
     <ul>
 <li>語言學要回答<code>語言的習得與發展</code>，<code>結構與功能</code>，<code>神經與心理機制</code>，<code>社會變異與演化過程</code>等。</li>
-<li><p>經驗/計算語言學用電腦來幫助我們回答上述問題，並產生應用。</p></li>
-<li><p>大數據中的語言數據（<strong>語料</strong>）蘊含了<strong>文化歷史記憶，社會心理趨勢，政治輿情傾向，情緒偏好分佈,人格特質與決策行為，疾病前期徵兆.</strong> </p></li>
+<li><p>經驗/計算語言學 (empirical/computational linguistics) [a.k.a. Natural Language Processing] 用電腦來幫助我們回答上述問題，並產生應用。</p></li>
+<li><p>大數據中的語言數據（<strong>語料</strong>）蘊含了<strong>文化歷史記憶，社會心理趨勢，政治輿情傾向，情緒偏好分佈,人格特質與決策行為，疾病前期徵兆，等等</strong>。 </p></li>
 </ul>
 
   </article>
@@ -110,13 +111,12 @@
 
 <slide class="" id="slide-5" style="background:;">
   <hgroup>
-    <h2>語言分析是資料科學的第二把刀 Linguistic analysis and Data Science</h2>
+    <h2>語言分析與處理是資料科學的第二把刀 Linguistic analysis and Data Science</h2>
   </hgroup>
   <article data-timings="">
     <ul class = "build incremental">
-<li><code>Linguistic data are ubiqutous</code>, knowledge to be discovered, tendency to be predicted.</li>
-<li>計算(語言學)是<code>理論(語言學)</code>與<code>應用(語言學)</code>的橋樑。 </li>
-<li>自然語言處理 (Natural Language Processing) and 文本分析技術 (Textual Analytics) are the keys [Why? pressing <code>p</code>]</li>
+<li><p><code>Linguistic data are ubiqutous</code>, knowledge to be discovered, tendency to be predicted.</p></li>
+<li><p>自然語言處理 (Natural Language Processing) and 文本分析技術 (Textual Analytics) are the keys [Why? pressing <code>p</code>]</p></li>
 </ul>
 
   </article>
@@ -143,7 +143,7 @@ Natural Language Processing (NLP) techniques have been playing an increasing rol
   <article data-timings="">
     <ul>
 <li><p>為了溝通與表情（情緒）達意（思維），我們所實現出來的語言資料。</p></li>
-<li><p>在計算語言學（自然語言處理）的脈絡下，廣義的語料包括各項<code>語言資源</code>（字典，詞庫，語料庫，語法樹庫，知識本體，等等。）</p></li>
+<li><p>在計算語言學（自然語言處理）的脈絡下，廣義的語料包括各項<code>語言資源</code>（字典 dictionay，詞庫 lexicon，語料庫 corpus，語法樹庫 treebank，知識本體 ontologies，等等。）</p></li>
 </ul>
 
   </article>
@@ -159,10 +159,12 @@ Natural Language Processing (NLP) techniques have been playing an increasing rol
 <li>之間的距離沒有妳想的那麼遠。</li>
 <li>在計算語言學的研究與應用中向來扮演著關鍵性的角色。數位時代下的多元與巨量趨勢，語料科學對於科學與社會的影響力正在發酵。</li>
 <li><p>對於開發各種語言資訊應用，理解與推展社會進步的潛力</p></li>
-<li><p>政府 &gt;&gt; 公民嗨客(civic hacking) &gt;&gt; 學界 &gt;&gt; 產業</p></li>
-</ul>
+<li><p>政府 &gt;&gt; 公民嗨客(civic hacking) &gt;&gt; 學界 &gt;&gt; 產業</p>
 
+<blockquote>
 <p>open the data &gt;&gt; hacking the data &gt;&gt; exploring the data &gt;&gt; data social product</p>
+</blockquote></li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -251,16 +253,7 @@ Can&#39;t you just use the transcription of Taiwanese sound to input 漢字 ?!?<
     <h2>BIGLEX ：萌典的學伴（學界版）</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">#f &lt;- file(&quot;~/Linguistic.Data/4Practice/open.gov/taipei/data.csv&quot;, encoding = &quot;big5&quot;)
-#d &lt;- read.csv(f)
-# % 參考 http://rstudio-pubs-static.s3.amazonaws.com/12226_6e457923ca9a4d9d9d7010bb6d2a73be.html#4
-
-#% http://data.taipei.gov.tw/opendata/apply/NewDataContent?oid=47C21F11-A278-4C86-BEC0-185A300D5226
-
-#d &lt;- read.csv(&quot;data.csv&quot;)
-#print(xtable(head(d)), type = &quot;html&quot;)
-</code></pre>
-
+    
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -313,20 +306,18 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
 
 <slide class="" id="slide-15" style="background:;">
   <hgroup>
-    <h2>Questions to be answered</h2>
+    <h2>Goals and questions to answer</h2>
   </hgroup>
   <article data-timings="">
-    <p><strong>Big Three</strong> (anonymous student, 2014)</p>
+    <p>我們的<del>理想</del>長遠目標</p>
 
 <ol>
-<li>LDS 可以保證我論文順利嗎？</li>
-<li>LDS 可以讓我找到好工作嗎？</li>
-<li>LDS 我要學那些東西才叫作語料科學家？</li>
+<li>人人都可以玩（語言）科學，只要她想。</li>
+<li>人人都可以邊玩邊練功邊貢獻社會，就算她沒在想。</li>
+<li>這可能嗎？</li>
 </ol>
 
-<p><strong>Yes, Yes, and</strong></p>
-
-<p><a class="btn btn-large btn-danger" rel="popover" data-content="下學期台大也會開授此課程" data-original-title="可以參考 http://tmblr.co/Z3QvCwkMkTC4" id='example'>The training program</a>
+<p><a class="btn btn-large btn-danger" rel="popover" data-content="大家轉念願意放下，理解到知識從來就不應私有化。" data-original-title="" id='example'>很抱歉，不可能。除非</a>
 <a id='example' data-content='Change directory doesn't actually change the directory. It changes the shell's idea of which directory we are in' data-original-title='Note'></a></p>
 
   </article>
@@ -586,9 +577,9 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
   </hgroup>
   <article data-timings="">
     <ul>
-<li>原視，公視，客語台。</li>
-<li>中央通訊社？</li>
-<li>手冊，</li>
+<li>原視，公視，客語台影音文稿。</li>
+<li>中央通訊社新聞。</li>
+<li>各式公文宣導手冊。</li>
 <li>(以 NPR API 為例)</li>
 </ul>
 
@@ -626,11 +617,26 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
 
 <slide class="" id="slide-24" style="background:;">
   <hgroup>
-    <h2>願</h2>
+    <h2>結論：信願行 Conclusion</h2>
   </hgroup>
   <article data-timings="">
     <ul>
+<li><img class='center'src="assets/img/hacker.png" alt="Drawing" style="width: 350px; height：150px"/></li>
 <li>眾籌眾包眾什麼都好 Crowd (found|sourc)ing language resources for Taiwan.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h1>謝謝大家！</h1>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Slides: <a href="http://loperntu.github.io/g0v2014lopen/">http://loperntu.github.io/g0v2014lopen/</a></li>
+<li>LOPEN project: <a href="http://bit.ly/4lopen">http://bit.ly/4lopen</a> 請幫忙！</li>
 </ul>
 
   </article>
@@ -667,7 +673,7 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='語言分析是資料科學的第二把刀 Linguistic analysis and Data Science'>
+        data-slide=5 title='語言分析與處理是資料科學的第二把刀 Linguistic analysis and Data Science'>
          5
       </a>
     </li>
@@ -727,7 +733,7 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='Questions to be answered'>
+        data-slide=15 title='Goals and questions to answer'>
          15
       </a>
     </li>
@@ -781,8 +787,14 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=24 title='願'>
+        data-slide=24 title='結論：信願行 Conclusion'>
          24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='謝謝大家！'>
+         25
       </a>
     </li>
   </ul>
