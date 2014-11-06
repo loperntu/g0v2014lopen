@@ -17,7 +17,7 @@ mode        : selfcontained # {standalone, draft}
 ## 想法 (Two cents)
 
 1. 語言學和開放政府的關係
-2. 開放語料的意義與實作
+2. 開放語料的意義與實作架構
 3. 開放語料的未來芻議
 
 
@@ -33,23 +33,24 @@ mode        : selfcontained # {standalone, draft}
 
 --- .dark .nobackground .quote
 # 2 分鐘背景知識
+### 2 minutes Linguistics
 
 
 ---
 ## 語言學是什麼? What is Linguistics ?
 
 - 語言學要回答`語言的習得與發展`，`結構與功能`，`神經與心理機制`，`社會變異與演化過程`等。
-- 經驗/計算語言學用電腦來幫助我們回答上述問題，並產生應用。
+- 經驗/計算語言學 (empirical/computational linguistics) [a.k.a. Natural Language Processing] 用電腦來幫助我們回答上述問題，並產生應用。
 
-- 大數據中的語言數據（**語料**）蘊含了**文化歷史記憶，社會心理趨勢，政治輿情傾向，情緒偏好分佈,人格特質與決策行為，疾病前期徵兆.** 
+- 大數據中的語言數據（**語料**）蘊含了**文化歷史記憶，社會心理趨勢，政治輿情傾向，情緒偏好分佈,人格特質與決策行為，疾病前期徵兆，等等**。 
 
 
 --- 
 
-## 語言分析是資料科學的第二把刀 Linguistic analysis and Data Science
+## 語言分析與處理是資料科學的第二把刀 Linguistic analysis and Data Science
 
 > - `Linguistic data are ubiqutous`, knowledge to be discovered, tendency to be predicted.
-> - 計算(語言學)是`理論(語言學)`與`應用(語言學)`的橋樑。 
+
 > - 自然語言處理 (Natural Language Processing) and 文本分析技術 (Textual Analytics) are the keys [Why? pressing `p`]
 
 *** =pnotes
@@ -70,7 +71,7 @@ Natural Language Processing (NLP) techniques have been playing an increasing rol
 
 - 為了溝通與表情（情緒）達意（思維），我們所實現出來的語言資料。
 
-- 在計算語言學（自然語言處理）的脈絡下，廣義的語料包括各項`語言資源`（字典，詞庫，語料庫，語法樹庫，知識本體，等等。）
+- 在計算語言學（自然語言處理）的脈絡下，廣義的語料包括各項`語言資源`（字典 dictionay，詞庫 lexicon，語料庫 corpus，語法樹庫 treebank，知識本體 ontologies，等等。）
 
 
 
@@ -83,8 +84,7 @@ Natural Language Processing (NLP) techniques have been playing an increasing rol
 - 對於開發各種語言資訊應用，理解與推展社會進步的潛力
 
 - 政府 >> 公民嗨客(civic hacking) >> 學界 >> 產業
-
-open the data >> hacking the data >> exploring the data >> data social product
+> open the data >> hacking the data >> exploring the data >> data social product
 
 
 
@@ -143,16 +143,6 @@ Can't you just use the transcription of Taiwanese sound to input 漢字 ?!?
 ---
 ## BIGLEX ：萌典的學伴（學界版）
 
-```{r}
-#f <- file("~/Linguistic.Data/4Practice/open.gov/taipei/data.csv", encoding = "big5")
-#d <- read.csv(f)
-# % 參考 http://rstudio-pubs-static.s3.amazonaws.com/12226_6e457923ca9a4d9d9d7010bb6d2a73be.html#4
-
-#% http://data.taipei.gov.tw/opendata/apply/NewDataContent?oid=47C21F11-A278-4C86-BEC0-185A300D5226
-
-#d <- read.csv("data.csv")
-#print(xtable(head(d)), type = "html")
-```
 
 
 
@@ -174,19 +164,15 @@ print(M1, tag = 'chart')
 
 ---
   
-## Questions to be answered 
+## Goals and questions to answer 
   
-**Big Three** (anonymous student, 2014)
+我們的~~理想~~長遠目標
 
-
-1. LDS 可以保證我論文順利嗎？
-2. LDS 可以讓我找到好工作嗎？
-3. LDS 我要學那些東西才叫作語料科學家？
-
+1. 人人都可以玩（語言）科學，只要她想。
+2. 人人都可以邊玩邊練功邊貢獻社會，就算她沒在想。
+3. 這可能嗎？
   
-**Yes, Yes, and**
-  
-<a class="btn btn-large btn-danger" rel="popover" data-content="下學期台大也會開授此課程" data-original-title="可以參考 http://tmblr.co/Z3QvCwkMkTC4" id='example'>The training program</a>
+<a class="btn btn-large btn-danger" rel="popover" data-content="大家轉念願意放下，理解到知識從來就不應私有化。" data-original-title="" id='example'>很抱歉，不可能。除非</a>
 <a id='example' data-content='Change directory doesn't actually change the directory. It changes the shell's idea of which directory we are in' data-original-title='Note'></a>
 
 
@@ -266,9 +252,9 @@ slidifyUI(
 ---
 ## 從「還文於民」到「還語於民」
 
-* 原視，公視，客語台。
-* 中央通訊社？
-* 手冊，
+* 原視，公視，客語台影音文稿。
+* 中央通訊社新聞。
+* 各式公文宣導手冊。
 * (以 NPR API 為例)
 
 
@@ -291,8 +277,19 @@ slidifyUI(
 
 
 ---
-## 願
+## 結論：信願行 Conclusion
 
+
+* <img class='center'src="assets/img/hacker.png" alt="Drawing" style="width: 350px; height：150px"/>
 * 眾籌眾包眾什麼都好 Crowd (found|sourc)ing language resources for Taiwan.
+
+
+---
+# 謝謝大家！
+
+- Slides: <http://loperntu.github.io/g0v2014lopen/>
+- LOPEN project: <http://bit.ly/4lopen> 請幫忙！
+
+
 
 
