@@ -42,7 +42,7 @@ mode        : selfcontained # {standalone, draft}
 - 語言學要回答`語言的習得與發展`，`結構與功能`，`神經與心理機制`，`社會變異與演化過程`等。
 - 經驗/計算語言學 (empirical/computational linguistics) [a.k.a. Natural Language Processing] 用電腦來幫助我們回答上述問題，並產生應用。
 
-- 大數據中的語言數據（**語料**）蘊含了**文化歷史記憶，社會心理趨勢，政治輿情傾向，情緒偏好分佈,人格特質與決策行為，疾病前期徵兆，等等**。 
+- (大數據中的) 語言數據（**語料**）蘊含了**文化歷史記憶，社會心理趨勢，政治輿情傾向，情緒偏好分佈，人格特質與決策行為，疾病前期徵兆等等**。 
 
 
 --- 
@@ -55,9 +55,7 @@ mode        : selfcontained # {standalone, draft}
 
 *** =pnotes
 <q>
-> Enormous amounts of textual biomedical information are becoming available electronically on a daily basis, making it difficult for researchers or indexers to keep current. 
-There is a pressing need to develop automated methods to index, codify, and manage the growing body of information in order to increase its accessibility and use for applications such as information retrieval, knowledge discovery, and database curation.
-Natural Language Processing (NLP) techniques have been playing an increasing role in extracting and managing biomedical entities and relations from text. …. substantially reducing the overhead of the development process.
+> Enormous amounts of textual information are becoming available electronically on a daily basis,...... Natural Language Processing (NLP) techniques have been playing an increasing role in extracting and managing entities and relations from text... substantially reducing the overhead of the development process.
 </q>
 
 
@@ -80,8 +78,8 @@ Natural Language Processing (NLP) techniques have been playing an increasing rol
 ## 語言學與零時政府 Linguistics and Open Government
 
 - 之間的距離沒有妳想的那麼遠。
-- 在計算語言學的研究與應用中向來扮演著關鍵性的角色。數位時代下的多元與巨量趨勢，語料科學對於科學與社會的影響力正在發酵。
-- 對於開發各種語言資訊應用，理解與推展社會進步的潛力
+- 數位時代下的多元與巨量趨勢，語料科學對於科學與社會的影響力正在發酵。
+- 開發各種語言資訊應用，理解與推展社會進步的潛力
 
 - 政府 >> 公民嗨客(civic hacking) >> 學界 >> 產業
 > open the data >> hacking the data >> exploring the data >> data social product
@@ -138,12 +136,18 @@ Can't you just use the transcription of Taiwanese sound to input 漢字 ?!?
 ---
 ## Linked Linguistic Data Movement 
 
+[Open Linguistics] (http://linguistics.okfn.org/)
 
+<img class='center'src="assets/img/llod-cloud.png" alt="Drawing" style="width: 500px; height：200px"/>
 
 
 
 ---
 ## LOPEN and BIGLEX 
+
+<iframe width="60" height="50" src='assets/img/lopen.png' frameborder="0" allowfullscreen></iframe>
+
+
 
 
 
@@ -208,11 +212,9 @@ n1$print('chart1')
 ---
 ## 表格數據與文本數據 Structured and un-structured data
 
-> 脫黨投票不一定較好，可能該立委是憑良心投票，也可能是受財團、企業影響所致，還請點選該立委觀看其脫黨投票的表決**內容**再作論定。
+> "脫黨投票不一定較好，可能該立委是憑良心投票，也可能是受財團、企業影響所致，還請點選該立委觀看其脫黨投票的表決**內容**再作論定。"
 
-> 量化數據不能代表好壞只能參考，修正草案數多不一定較好，還請點選該立委觀看其修正草案的**內容**再作論定。
-
-<http://ly.g0v.tw/>
+> "量化數據不能代表好壞只能參考，修正草案數多不一定較好，還請點選該立委觀看其修正草案的**內容**再作論定。" <http://ly.g0v.tw/>
 
 
 
