@@ -120,7 +120,7 @@ Can't you just use the transcription of Taiwanese sound to input 漢字 ?!?
 
 
 ---
-## 台語輸入 TaigiIME: A story from A-Tsioh
+## 台語輸入 TaigiME: A story from A-Tsioh
 
 > I had the idea, but was missing the Data.... and MOE.cc found!!
 > If the MOE had selected a too restrictive licence, the APP would never had made its way up to the Google Play Store, and now with the status of downloaded more than 10.000 times ! <https://github.com/a-tsioh/TaigIME-android/>
@@ -160,6 +160,22 @@ Can't you just use the transcription of Taiwanese sound to input 漢字 ?!?
 ---
 ## BIGLEX ：萌典的學伴（學界版）
 
+| **Module.Variable**        | **Description**                       |
+|---------------------|---------------------------------------|
+| `concept.sense`     | word sense number from [Chinese Wordnet, CWN](http://lope.linguistics.ntu.edu.tw/cwn/), please [help](http://lope.linguistics.ntu.edu.tw/cwikin/)       |
+| `concept.gloss`     | sense definitions from CWN    |
+| `concept.relations` | lexical semantic relations      |
+| `emotion.polarity`  | polarity of descriptive emotional words|
+| `emotion.location`  | location collocates of emotion  |
+| `emotion.cause`     | cause collocates               |
+| `emotion.result`    | resulting event collocates        |
+| `emotion.time`        | time collocates        |
+| `frequency.asbc`      | frequency of Sinica Corpus|
+| `frequency.plurk`     | frequency of Plurk Corpus       |
+| `frequency.childes`   | frequency of CHILDES Corpus  |
+| `frequency.ptt`       | frequency of PTT                    |
+
+**AND MANY MORE!** modules in progress: 情緒 發展歷程 語義 使用頻率 年紀 關係 性別 教學難易 部首概念 意類 知識本體 社會心理人格 . . . . . . . . . . . . . .  
 
 
 
@@ -168,10 +184,12 @@ Can't you just use the transcription of Taiwanese sound to input 漢字 ?!?
 ## `BIGLEX`: Exploratory, Reproducible, Scaled
 
 <textarea class='interactive' id='interactive{{slide.num}}' data-cell='{{slide.num}}' data-results='asis' style='display:none'>require(googleVis)
-M1 <- gvisMotionChart(
-  Fruits, idvar = 'Fruit',
-  timevar = 'Year')
-print(M1, tag = 'chart')</textarea>
+load("./mot/mot.RData")
+# head(convdata)
+# head(compdata)
+Modal <- gvisMotionChart(convdata, idvar="VERB", timeva="DECADE") 
+print(Modal, tag ='chart')
+plot(Modal) </textarea>
 
 
 
@@ -199,6 +217,9 @@ print(M1, tag = 'chart')</textarea>
 ---
 ## 立委問政行為: PART I 
 
+#### 法條修正草案數前三十名立委
+
+
 <div id = 'chart1' class = 'rChart nvd3'></div>
 <script type='text/javascript'>
  $(document).ready(function(){
@@ -209,108 +230,186 @@ print(M1, tag = 'chart')</textarea>
  "dom": "chart1",
 "width":    800,
 "height":    400,
-"x": "Hair",
-"y": "Freq",
-"group": "Eye",
+"x": "party",
+"y": "freq",
+"group": "gender",
 "type": "multiBarChart",
 "id": "chart1" 
 },
         data = [
  {
- "Hair": "Black",
-"Eye": "Brown",
-"Sex": "Male",
-"Freq":             32 
+ "name": "江惠貞",
+"party": "國民黨",
+"gender": "女",
+"freq": 127 
 },
 {
- "Hair": "Brown",
-"Eye": "Brown",
-"Sex": "Male",
-"Freq":             53 
+ "name": "蔣乃辛",
+"party": "國民黨",
+"gender": "男",
+"freq": 109 
 },
 {
- "Hair": "Red",
-"Eye": "Brown",
-"Sex": "Male",
-"Freq":             10 
+ "name": "李俊俋",
+"party": "民進黨",
+"gender": "男",
+"freq": 105 
 },
 {
- "Hair": "Blond",
-"Eye": "Brown",
-"Sex": "Male",
-"Freq":              3 
+ "name": "李昆澤",
+"party": "民進黨",
+"gender": "男",
+"freq": 95 
 },
 {
- "Hair": "Black",
-"Eye": "Blue",
-"Sex": "Male",
-"Freq":             11 
+ "name": "邱志偉",
+"party": "民進黨",
+"gender": "男",
+"freq": 92 
 },
 {
- "Hair": "Brown",
-"Eye": "Blue",
-"Sex": "Male",
-"Freq":             50 
+ "name": "陳亭妃",
+"party": "民進黨",
+"gender": "女",
+"freq": 87 
 },
 {
- "Hair": "Red",
-"Eye": "Blue",
-"Sex": "Male",
-"Freq":             10 
+ "name": "劉建國",
+"party": "民進黨",
+"gender": "男",
+"freq": 86 
 },
 {
- "Hair": "Blond",
-"Eye": "Blue",
-"Sex": "Male",
-"Freq":             30 
+ "name": "李桐豪",
+"party": "親民黨",
+"gender": "女",
+"freq": 74 
 },
 {
- "Hair": "Black",
-"Eye": "Hazel",
-"Sex": "Male",
-"Freq":             10 
+ "name": "賴士葆",
+"party": "國民黨",
+"gender": "男",
+"freq": 68 
 },
 {
- "Hair": "Brown",
-"Eye": "Hazel",
-"Sex": "Male",
-"Freq":             25 
+ "name": "尤美女",
+"party": "民進黨",
+"gender": "女",
+"freq": 67 
 },
 {
- "Hair": "Red",
-"Eye": "Hazel",
-"Sex": "Male",
-"Freq":              7 
+ "name": "李應元",
+"party": "民進黨",
+"gender": "女",
+"freq": 67 
 },
 {
- "Hair": "Blond",
-"Eye": "Hazel",
-"Sex": "Male",
-"Freq":              5 
+ "name": "王育敏",
+"party": "國民黨",
+"gender": "女",
+"freq": 61 
 },
 {
- "Hair": "Black",
-"Eye": "Green",
-"Sex": "Male",
-"Freq":              3 
+ "name": "吳宜臻",
+"party": "民進黨",
+"gender": "女",
+"freq": 60 
 },
 {
- "Hair": "Brown",
-"Eye": "Green",
-"Sex": "Male",
-"Freq":             15 
+ "name": "陳其邁",
+"party": "民進黨",
+"gender": "男",
+"freq": 60 
 },
 {
- "Hair": "Red",
-"Eye": "Green",
-"Sex": "Male",
-"Freq":              7 
+ "name": "丁守中",
+"party": "國民黨",
+"gender": "男",
+"freq": 58 
 },
 {
- "Hair": "Blond",
-"Eye": "Green",
-"Sex": "Male",
-"Freq":              8 
+ "name": "林佳龍",
+"party": "民進黨",
+"gender": "男",
+"freq": 56 
+},
+{
+ "name": "林淑芬",
+"party": "民進黨",
+"gender": "女",
+"freq": 55 
+},
+{
+ "name": "盧秀燕",
+"party": "國民黨",
+"gender": "女",
+"freq": 54 
+},
+{
+ "name": "蔡正元",
+"party": "國民黨",
+"gender": "男",
+"freq": 54 
+},
+{
+ "name": "羅淑蕾",
+"party": "國民黨",
+"gender": "女",
+"freq": 52 
+},
+{
+ "name": "黃偉哲",
+"party": "民進黨",
+"gender": "男",
+"freq": 47 
+},
+{
+ "name": "謝國樑",
+"party": "國民黨",
+"gender": "男",
+"freq": 45 
+},
+{
+ "name": "潘孟安",
+"party": "民進黨",
+"gender": "男",
+"freq": 44 
+},
+{
+ "name": "許添財",
+"party": "民進黨",
+"gender": "男",
+"freq": 43 
+},
+{
+ "name": "黃昭順",
+"party": "國民黨",
+"gender": "女",
+"freq": 43 
+},
+{
+ "name": "趙天麟",
+"party": "民進黨",
+"gender": "男",
+"freq": 41 
+},
+{
+ "name": "孫大千",
+"party": "國民黨",
+"gender": "男",
+"freq": 41 
+},
+{
+ "name": "管碧玲",
+"party": "民進黨",
+"gender": "女",
+"freq": 41 
+},
+{
+ "name": "吳育仁",
+"party": "國民黨",
+"gender": "男",
+"freq": 41 
 } 
 ]
   
@@ -342,7 +441,8 @@ print(M1, tag = 'chart')</textarea>
         }
           
          
-        
+        chart
+  .color([ "purple", "blue" ])
           
         
 
@@ -362,13 +462,15 @@ print(M1, tag = 'chart')</textarea>
     };
 </script>
 
+> "量化數據不能代表好壞只能參考，修正草案數多不一定較好，還請點選該立委觀看其修正草案的**內容**再作論定。" <http://ly.g0v.tw/>
+
+
 ---
 ## 表格數據與文本數據 Structured and un-structured data
 
-> "脫黨投票不一定較好，可能該立委是憑良心投票，也可能是受財團、企業影響所致，還請點選該立委觀看其脫黨投票的表決**內容**再作論定。"
+* Data 有很多類型。
 
-> "量化數據不能代表好壞只能參考，修正草案數多不一定較好，還請點選該立委觀看其修正草案的**內容**再作論定。" <http://ly.g0v.tw/>
-
+* 文本內容的深度分析可以增強信服力。
 
 
 
@@ -405,6 +507,8 @@ print(M1, tag = 'chart')</textarea>
 ## 立委問政行為: PART III
 
 > 國會測謊器：文本，論述，表情與政治 （無誠勿入）
+
+> (語音，文本，多模態，言談語用，語言心理)
 
 <iframe width="60" height="50" src='assets/img/microexpressions-lie-to-me.jpg' frameborder="0" allowfullscreen></iframe>
 
@@ -459,10 +563,11 @@ print(M1, tag = 'chart')</textarea>
 
 
 ---
-# 謝謝大家！
+# 謝謝大家！請幫忙！
 
 - Slides: <http://loperntu.github.io/g0v2014lopen/>
-- LOPEN project: <http://bit.ly/4lopen> 請幫忙！
+- LOPEN project: <http://bit.ly/4lopen> 
+- TaigiLex <https://g0v.hackpad.com/TaigiLex>
 
 
 

@@ -217,7 +217,7 @@ Can&#39;t you just use the transcription of Taiwanese sound to input 漢字 ?!?<
 
 <slide class="" id="slide-10" style="background:;">
   <hgroup>
-    <h2>台語輸入 TaigiIME: A story from A-Tsioh</h2>
+    <h2>台語輸入 TaigiME: A story from A-Tsioh</h2>
   </hgroup>
   <article data-timings="">
     <blockquote>
@@ -276,7 +276,64 @@ If the MOE had selected a too restrictive licence, the APP would never had made 
     <h2>BIGLEX ：萌典的學伴（學界版）</h2>
   </hgroup>
   <article data-timings="">
-    
+    <table><thead>
+<tr>
+<th><strong>Module.Variable</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>concept.sense</code></td>
+<td>word sense number from <a href="http://lope.linguistics.ntu.edu.tw/cwn/">Chinese Wordnet, CWN</a>, please <a href="http://lope.linguistics.ntu.edu.tw/cwikin/">help</a></td>
+</tr>
+<tr>
+<td><code>concept.gloss</code></td>
+<td>sense definitions from CWN</td>
+</tr>
+<tr>
+<td><code>concept.relations</code></td>
+<td>lexical semantic relations</td>
+</tr>
+<tr>
+<td><code>emotion.polarity</code></td>
+<td>polarity of descriptive emotional words</td>
+</tr>
+<tr>
+<td><code>emotion.location</code></td>
+<td>location collocates of emotion</td>
+</tr>
+<tr>
+<td><code>emotion.cause</code></td>
+<td>cause collocates</td>
+</tr>
+<tr>
+<td><code>emotion.result</code></td>
+<td>resulting event collocates</td>
+</tr>
+<tr>
+<td><code>emotion.time</code></td>
+<td>time collocates</td>
+</tr>
+<tr>
+<td><code>frequency.asbc</code></td>
+<td>frequency of Sinica Corpus</td>
+</tr>
+<tr>
+<td><code>frequency.plurk</code></td>
+<td>frequency of Plurk Corpus</td>
+</tr>
+<tr>
+<td><code>frequency.childes</code></td>
+<td>frequency of CHILDES Corpus</td>
+</tr>
+<tr>
+<td><code>frequency.ptt</code></td>
+<td>frequency of PTT</td>
+</tr>
+</tbody></table>
+
+<p><strong>AND MANY MORE!</strong> modules in progress: 情緒 發展歷程 語義 使用頻率 年紀 關係 性別 教學難易 部首概念 意類 知識本體 社會心理人格 . . . . . . . . . . . . . .  </p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -291,10 +348,15 @@ If the MOE had selected a too restrictive licence, the APP would never had made 
   <div class='span5'>
     <form id="knitForm15" data-cell="15">
       <p><textarea class='interactive' id='interactive15' data-cell='15' data-results='asis' style='display:none'>require(googleVis)
-M1 &lt;- gvisMotionChart(
-  Fruits, idvar = &#39;Fruit&#39;,
-  timevar = &#39;Year&#39;)
-print(M1, tag = &#39;chart&#39;)</textarea></p>
+load(&quot;./mot/mot.RData&quot;)</p>
+
+<h1>head(convdata)</h1>
+
+<h1>head(compdata)</h1>
+
+<p>Modal &lt;- gvisMotionChart(convdata, idvar=&quot;VERB&quot;, timeva=&quot;DECADE&quot;) 
+print(Modal, tag =&#39;chart&#39;)
+plot(Modal) </textarea></p>
 
       <div id='aceeditor15' style="height:px;"></div>
       <div class='interactive btn-toolbar pull-left'>
@@ -352,7 +414,9 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
     <h2>立委問政行為: PART I</h2>
   </hgroup>
   <article data-timings="">
-    <div id = 'chart1' class = 'rChart nvd3'></div>
+    <h4>法條修正草案數前三十名立委</h4>
+
+<div id = 'chart1' class = 'rChart nvd3'></div>
 
 <script type='text/javascript'>
  $(document).ready(function(){
@@ -363,108 +427,186 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
  "dom": "chart1",
 "width":    800,
 "height":    400,
-"x": "Hair",
-"y": "Freq",
-"group": "Eye",
+"x": "party",
+"y": "freq",
+"group": "gender",
 "type": "multiBarChart",
 "id": "chart1" 
 },
         data = [
  {
- "Hair": "Black",
-"Eye": "Brown",
-"Sex": "Male",
-"Freq":             32 
+ "name": "江惠貞",
+"party": "國民黨",
+"gender": "女",
+"freq": 127 
 },
 {
- "Hair": "Brown",
-"Eye": "Brown",
-"Sex": "Male",
-"Freq":             53 
+ "name": "蔣乃辛",
+"party": "國民黨",
+"gender": "男",
+"freq": 109 
 },
 {
- "Hair": "Red",
-"Eye": "Brown",
-"Sex": "Male",
-"Freq":             10 
+ "name": "李俊俋",
+"party": "民進黨",
+"gender": "男",
+"freq": 105 
 },
 {
- "Hair": "Blond",
-"Eye": "Brown",
-"Sex": "Male",
-"Freq":              3 
+ "name": "李昆澤",
+"party": "民進黨",
+"gender": "男",
+"freq": 95 
 },
 {
- "Hair": "Black",
-"Eye": "Blue",
-"Sex": "Male",
-"Freq":             11 
+ "name": "邱志偉",
+"party": "民進黨",
+"gender": "男",
+"freq": 92 
 },
 {
- "Hair": "Brown",
-"Eye": "Blue",
-"Sex": "Male",
-"Freq":             50 
+ "name": "陳亭妃",
+"party": "民進黨",
+"gender": "女",
+"freq": 87 
 },
 {
- "Hair": "Red",
-"Eye": "Blue",
-"Sex": "Male",
-"Freq":             10 
+ "name": "劉建國",
+"party": "民進黨",
+"gender": "男",
+"freq": 86 
 },
 {
- "Hair": "Blond",
-"Eye": "Blue",
-"Sex": "Male",
-"Freq":             30 
+ "name": "李桐豪",
+"party": "親民黨",
+"gender": "女",
+"freq": 74 
 },
 {
- "Hair": "Black",
-"Eye": "Hazel",
-"Sex": "Male",
-"Freq":             10 
+ "name": "賴士葆",
+"party": "國民黨",
+"gender": "男",
+"freq": 68 
 },
 {
- "Hair": "Brown",
-"Eye": "Hazel",
-"Sex": "Male",
-"Freq":             25 
+ "name": "尤美女",
+"party": "民進黨",
+"gender": "女",
+"freq": 67 
 },
 {
- "Hair": "Red",
-"Eye": "Hazel",
-"Sex": "Male",
-"Freq":              7 
+ "name": "李應元",
+"party": "民進黨",
+"gender": "女",
+"freq": 67 
 },
 {
- "Hair": "Blond",
-"Eye": "Hazel",
-"Sex": "Male",
-"Freq":              5 
+ "name": "王育敏",
+"party": "國民黨",
+"gender": "女",
+"freq": 61 
 },
 {
- "Hair": "Black",
-"Eye": "Green",
-"Sex": "Male",
-"Freq":              3 
+ "name": "吳宜臻",
+"party": "民進黨",
+"gender": "女",
+"freq": 60 
 },
 {
- "Hair": "Brown",
-"Eye": "Green",
-"Sex": "Male",
-"Freq":             15 
+ "name": "陳其邁",
+"party": "民進黨",
+"gender": "男",
+"freq": 60 
 },
 {
- "Hair": "Red",
-"Eye": "Green",
-"Sex": "Male",
-"Freq":              7 
+ "name": "丁守中",
+"party": "國民黨",
+"gender": "男",
+"freq": 58 
 },
 {
- "Hair": "Blond",
-"Eye": "Green",
-"Sex": "Male",
-"Freq":              8 
+ "name": "林佳龍",
+"party": "民進黨",
+"gender": "男",
+"freq": 56 
+},
+{
+ "name": "林淑芬",
+"party": "民進黨",
+"gender": "女",
+"freq": 55 
+},
+{
+ "name": "盧秀燕",
+"party": "國民黨",
+"gender": "女",
+"freq": 54 
+},
+{
+ "name": "蔡正元",
+"party": "國民黨",
+"gender": "男",
+"freq": 54 
+},
+{
+ "name": "羅淑蕾",
+"party": "國民黨",
+"gender": "女",
+"freq": 52 
+},
+{
+ "name": "黃偉哲",
+"party": "民進黨",
+"gender": "男",
+"freq": 47 
+},
+{
+ "name": "謝國樑",
+"party": "國民黨",
+"gender": "男",
+"freq": 45 
+},
+{
+ "name": "潘孟安",
+"party": "民進黨",
+"gender": "男",
+"freq": 44 
+},
+{
+ "name": "許添財",
+"party": "民進黨",
+"gender": "男",
+"freq": 43 
+},
+{
+ "name": "黃昭順",
+"party": "國民黨",
+"gender": "女",
+"freq": 43 
+},
+{
+ "name": "趙天麟",
+"party": "民進黨",
+"gender": "男",
+"freq": 41 
+},
+{
+ "name": "孫大千",
+"party": "國民黨",
+"gender": "男",
+"freq": 41 
+},
+{
+ "name": "管碧玲",
+"party": "民進黨",
+"gender": "女",
+"freq": 41 
+},
+{
+ "name": "吳育仁",
+"party": "國民黨",
+"gender": "男",
+"freq": 41 
 } 
 ]
   
@@ -496,7 +638,8 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
         }
           
          
-        
+        chart
+  .color([ "purple", "blue" ])
           
         
 
@@ -516,6 +659,10 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
     };
 </script>
 
+<blockquote>
+<p>&quot;量化數據不能代表好壞只能參考，修正草案數多不一定較好，還請點選該立委觀看其修正草案的<strong>內容</strong>再作論定。&quot; <a href="http://ly.g0v.tw/">http://ly.g0v.tw/</a></p>
+</blockquote>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -525,11 +672,10 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
     <h2>表格數據與文本數據 Structured and un-structured data</h2>
   </hgroup>
   <article data-timings="">
-    <blockquote>
-<p>&quot;脫黨投票不一定較好，可能該立委是憑良心投票，也可能是受財團、企業影響所致，還請點選該立委觀看其脫黨投票的表決<strong>內容</strong>再作論定。&quot;</p>
-
-<p>&quot;量化數據不能代表好壞只能參考，修正草案數多不一定較好，還請點選該立委觀看其修正草案的<strong>內容</strong>再作論定。&quot; <a href="http://ly.g0v.tw/">http://ly.g0v.tw/</a></p>
-</blockquote>
+    <ul>
+<li><p>Data 有很多類型。</p></li>
+<li><p>文本內容的深度分析可以增強信服力。</p></li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -569,6 +715,8 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
   <article data-timings="">
     <blockquote>
 <p>國會測謊器：文本，論述，表情與政治 （無誠勿入）</p>
+
+<p>(語音，文本，多模態，言談語用，語言心理)</p>
 </blockquote>
 
 <iframe width="60" height="50" src='assets/img/microexpressions-lie-to-me.jpg' frameborder="0" allowfullscreen></iframe>
@@ -653,12 +801,13 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
 
 <slide class="" id="slide-26" style="background:;">
   <hgroup>
-    <h1>謝謝大家！</h1>
+    <h1>謝謝大家！請幫忙！</h1>
   </hgroup>
   <article data-timings="">
     <ul>
 <li>Slides: <a href="http://loperntu.github.io/g0v2014lopen/">http://loperntu.github.io/g0v2014lopen/</a></li>
-<li>LOPEN project: <a href="http://bit.ly/4lopen">http://bit.ly/4lopen</a> 請幫忙！</li>
+<li>LOPEN project: <a href="http://bit.ly/4lopen">http://bit.ly/4lopen</a> </li>
+<li>TaigiLex <a href="https://g0v.hackpad.com/TaigiLex">https://g0v.hackpad.com/TaigiLex</a></li>
 </ul>
 
   </article>
@@ -725,7 +874,7 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='台語輸入 TaigiIME: A story from A-Tsioh'>
+        data-slide=10 title='台語輸入 TaigiME: A story from A-Tsioh'>
          10
       </a>
     </li>
@@ -821,7 +970,7 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=26 title='謝謝大家！'>
+        data-slide=26 title='謝謝大家！請幫忙！'>
          26
       </a>
     </li>
