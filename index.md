@@ -102,7 +102,7 @@ mode        : selfcontained # {standalone, draft}
 
 
 ---
-## 台語輸入 TaigiIME: A story from A-Tsioh
+## 台語輸入 TaigIME: A story from A-Tsioh
 ### 阮若打開 MOE ê Data
 
 > Thanks to MOE's opening of its 《臺灣閩南語常用詞辭典》I could:
@@ -120,7 +120,7 @@ Can't you just use the transcription of Taiwanese sound to input 漢字 ?!?
 
 
 ---
-## 台語輸入 TaigiME: A story from A-Tsioh
+## 台語輸入 TaigIME: A story from A-Tsioh
 
 > I had the idea, but was missing the Data.... and MOE.cc found!!
 > If the MOE had selected a too restrictive licence, the APP would never had made its way up to the Google Play Store, and now with the status of downloaded more than 10.000 times ! <https://github.com/a-tsioh/TaigIME-android/>
@@ -141,7 +141,6 @@ Can't you just use the transcription of Taiwanese sound to input 漢字 ?!?
 
 
 ---
-## LOPEN and BIGLEX 
 
 <iframe width="60" height="50" src='assets/img/lopen.png' frameborder="0" allowfullscreen></iframe>
 
@@ -175,22 +174,6 @@ Can't you just use the transcription of Taiwanese sound to input 漢字 ?!?
 
 
 
---- &interactive
-
-## `BIGLEX`: Exploratory, Reproducible, Scaled
-
-
-```r
-# require(googleVis)
-# load("./mot/mot.RData")
-# # head(convdata)
-# # head(compdata)
-# Modal <- gvisMotionChart(convdata, idvar="VERB", timeva="DECADE") 
-# print(Modal, tag ='chart')
-# plot(Modal) 
-```
-
-
 
 
 ---
@@ -206,7 +189,7 @@ Can't you just use the transcription of Taiwanese sound to input 漢字 ?!?
 <a class="btn btn-large btn-danger" rel="popover" data-content="大家轉念願意放下，理解到知識從來就不應私有化。" data-original-title="" id='example'>很抱歉，不可能。除非</a>
 <a id='example' data-content='Change directory doesn't actually change the directory. It changes the shell's idea of which directory we are in' data-original-title='Note'></a>
 
-
+### 舉個例子：LOPEN 如何幫助開放國會？
 
 
 
@@ -466,9 +449,9 @@ Can't you just use the transcription of Taiwanese sound to input 漢字 ?!?
 ---
 ## 表格數據與文本數據 Structured and un-structured data
 
-* Data 有很多類型。
+* 問題在於 Data 有很多類型。
 
-* 文本內容的深度分析可以增強信服力。
+* 對於文本內容的深度分析可以增強信服力。
 
 
 
