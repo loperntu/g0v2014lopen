@@ -459,10 +459,11 @@ Can't you just use the transcription of Taiwanese sound to input 漢字 ?!?
 --- 
 ## 立委問政行為: PART II
 
-DEMO
+<img class='center'src="assets/img/lai.png" alt="Drawing" style="width: 400px; height：200px"/>
 
 * 用語言表達來觀察價值選擇，關心主題與立場。
-* `keyness` calculation
+
+* `keyness` calculation algorithm 公開。
 
 
 ---

@@ -4,32 +4,18 @@ library(wordcloud)
 #par(family = 'MingLiU')
 par(family = 'HannotateTC-W5')
 par(mfrow=c(4,2))
-lai <- read.table("./data/laishibao.tbl", header = TRUE, encoding = "UTF-8")
-wordcloud(lai$word,lai$freq, min.freq = 0.005)
+par(mfrow = c(1,1))
+lai <- read.csv("./data/csvs/賴士葆.csv", header = TRUE, encoding = "UTF-8")
+
+wordcloud(lai$keyword,lai$raw_counts, min.freq = 2, colors = "blue")
+
+wordcloud(lai$keyword,lai$keyness, min.freq = 0.6, colors = "blue")
+
+ke <- read.csv("./data/csvs/柯建銘.csv", header = TRUE, encoding = "UTF-8")
 
 
 
 
-
-
-
-
-
-
-
-
-### fonts
-CNS1   MSungStd-Light-Acro from Adobe Reader 7.0 Traditional Chinese Font Pack
-
-
-
-
-
-
-## save as pdf OK
-pdf('x.pdf', family = 'CNS1')
-wordcloud(lai$word,lai$freq, min.freq = 0.005)
-dev.off()
 
 
 ######################################
