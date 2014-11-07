@@ -32,8 +32,8 @@ mode        : selfcontained # {standalone, draft}
 
 
 --- .dark .nobackground .quote
-# 2 分鐘背景知識
-### 2 minutes Linguistics
+# 1 分鐘背景知識
+### 1 minutes Linguistics
 
 
 ---
@@ -127,8 +127,6 @@ Can't you just use the transcription of Taiwanese sound to input 漢字 ?!?
 
 <img class='center'src="assets/img/taigiIME.png" alt="Drawing" style="width: 400px; height：200px"/>
 
-
-
 - sadly no pull requests yet
 - but quite a lot of feedback for a single man ! (I wish I had more time to spend on it)
 
@@ -148,14 +146,12 @@ Can't you just use the transcription of Taiwanese sound to input 漢字 ?!?
 <iframe width="60" height="50" src='assets/img/lopen.png' frameborder="0" allowfullscreen></iframe>
 
 
-
-
-
 --- .shout #demo
 
 # [DEMO: 開放語料系統](http://lopen.linguistics.ntu.edu.tw/copens) 
 
 <img class='center'src="assets/img/copens.png" alt="Drawing" style="width: 800px; height：250px"/>
+
 
 ---
 ## BIGLEX ：萌典的學伴（學界版）
@@ -184,15 +180,14 @@ Can't you just use the transcription of Taiwanese sound to input 漢字 ?!?
 ## `BIGLEX`: Exploratory, Reproducible, Scaled
 
 ```{r opts.label = 'interactive', results = 'asis'}
-require(googleVis)
-load("./mot/mot.RData")
-# head(convdata)
-# head(compdata)
-Modal <- gvisMotionChart(convdata, idvar="VERB", timeva="DECADE") 
-print(Modal, tag ='chart')
-plot(Modal) 
+# require(googleVis)
+# load("./mot/mot.RData")
+# # head(convdata)
+# # head(compdata)
+# Modal <- gvisMotionChart(convdata, idvar="VERB", timeva="DECADE") 
+# print(Modal, tag ='chart')
+# plot(Modal) 
 ```
-
 
 
 
@@ -249,26 +244,10 @@ n1$print('chart1')
 --- 
 ## 立委問政行為: PART II
 
+DEMO
 
-```{r, opts.label = 'shiny'}
-
-slidifyUI(
-  sidebarPanel(
-    selectInput('sex', 'Choose Sex', c('Male', 'Female')),
-    selectInput('type', 'Choose Type',
-      c('multiBarChart', 'multiBarHorizontalChart')
-    )
-  ),
-  mainPanel(
-    tags$div(id = 'nvd3plot', class='shiny-html-output nvd3 rChart')
-  )
-)
-```
-
-
-
-
-
+* 用語言表達來觀察價值選擇，關心主題與立場。
+* `keyness` calculation
 
 
 ---
@@ -311,9 +290,11 @@ slidifyUI(
 
 
 ---
-## 萌典學界版 
+## Social Labs 
 
-* 從詞典(dictionary) 詞庫 (lexicon) 詞網 (lex.network) 詞雲 (lex.cloud)
+* (語言學) 實驗室要放在社會發展的脈絡。
+
+* 詞典(dictionary) $\bowtie$ 詞庫 (lexicon) $\bowtie$ 詞網 (lex.network) $\bowtie$ 詞雲 (lex.cloud)
 
 <img class='center'src="assets/img/cwm.png" alt="Drawing" style="width: 450px; height：150px"/>
 

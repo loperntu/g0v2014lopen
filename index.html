@@ -85,10 +85,10 @@
 
 <slide class="dark nobackground quote" id="slide-3" style="background:;">
   <hgroup>
-    <h1>2 分鐘背景知識</h1>
+    <h1>1 分鐘背景知識</h1>
   </hgroup>
   <article data-timings="">
-    <h3>2 minutes Linguistics</h3>
+    <h3>1 minutes Linguistics</h3>
 
   </article>
   <!-- Presenter Notes -->
@@ -284,7 +284,7 @@ If the MOE had selected a too restrictive licence, the APP would never had made 
 </thead><tbody>
 <tr>
 <td><code>concept.sense</code></td>
-<td>word sense number from <a href="http://lope.linguistics.ntu.edu.tw/cwn/">Chinese Wordnet, CWN</a>, please <a href="http://lope.linguistics.ntu.edu.tw/cwikin/">help</a></td>
+<td>word sense number from <a href="http://lope.linguistics.ntu.edu.tw/cwn2/">Chinese Wordnet, CWN</a>, please <a href="http://lope.linguistics.ntu.edu.tw/cwikin/">help</a></td>
 </tr>
 <tr>
 <td><code>concept.gloss</code></td>
@@ -347,16 +347,14 @@ If the MOE had selected a too restrictive licence, the APP would never had made 
 <div class='row-fluid'>
   <div class='span5'>
     <form id="knitForm15" data-cell="15">
-      <p><textarea class='interactive' id='interactive15' data-cell='15' data-results='asis' style='display:none'>require(googleVis)
-load(&quot;./mot/mot.RData&quot;)</p>
-
-<h1>head(convdata)</h1>
-
-<h1>head(compdata)</h1>
-
-<p>Modal &lt;- gvisMotionChart(convdata, idvar=&quot;VERB&quot;, timeva=&quot;DECADE&quot;) 
-print(Modal, tag =&#39;chart&#39;)
-plot(Modal) </textarea></p>
+      <pre><code class="r"># require(googleVis)
+# load(&quot;./mot/mot.RData&quot;)
+# # head(convdata)
+# # head(compdata)
+# Modal &lt;- gvisMotionChart(convdata, idvar=&quot;VERB&quot;, timeva=&quot;DECADE&quot;) 
+# print(Modal, tag =&#39;chart&#39;)
+# plot(Modal) 
+</code></pre>
 
       <div id='aceeditor15' style="height:px;"></div>
       <div class='interactive btn-toolbar pull-left'>
@@ -686,23 +684,12 @@ plot(Modal) </textarea></p>
     <h2>立委問政行為: PART II</h2>
   </hgroup>
   <article data-timings="">
-    <div class="row-fluid">
-  <div class="span4">
-    <form class="well">
-      <label class="control-label" for="sex">Choose Sex</label>
-      <select id="sex"><option value="Male" selected>Male</option>
-<option value="Female">Female</option></select>
-      <script type="application/json" data-for="sex" data-nonempty="">{}</script>
-      <label class="control-label" for="type">Choose Type</label>
-      <select id="type"><option value="multiBarChart" selected>multiBarChart</option>
-<option value="multiBarHorizontalChart">multiBarHorizontalChart</option></select>
-      <script type="application/json" data-for="type" data-nonempty="">{}</script>
-    </form>
-  </div>
-  <div class="span8">
-    <div id="nvd3plot" class="shiny-html-output nvd3 rChart"></div>
-  </div>
-</div>
+    <p>DEMO</p>
+
+<ul>
+<li>用語言表達來觀察價值選擇，關心主題與立場。</li>
+<li><code>keyness</code> calculation</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -771,11 +758,12 @@ plot(Modal) </textarea></p>
 
 <slide class="" id="slide-24" style="background:;">
   <hgroup>
-    <h2>萌典學界版</h2>
+    <h2>Social Labs</h2>
   </hgroup>
   <article data-timings="">
     <ul>
-<li>從詞典(dictionary) 詞庫 (lexicon) 詞網 (lex.network) 詞雲 (lex.cloud)</li>
+<li><p>(語言學) 實驗室要放在社會發展的脈絡。</p></li>
+<li><p>詞典(dictionary) \(\bowtie\) 詞庫 (lexicon) \(\bowtie\) 詞網 (lex.network) \(\bowtie\) 詞雲 (lex.cloud)</p></li>
 </ul>
 
 <p><img class='center'src="assets/img/cwm.png" alt="Drawing" style="width: 450px; height：150px"/></p>
@@ -832,7 +820,7 @@ plot(Modal) </textarea></p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='2 分鐘背景知識'>
+        data-slide=3 title='1 分鐘背景知識'>
          3
       </a>
     </li>
@@ -958,7 +946,7 @@ plot(Modal) </textarea></p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=24 title='萌典學界版'>
+        data-slide=24 title='Social Labs'>
          24
       </a>
     </li>

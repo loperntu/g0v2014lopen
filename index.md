@@ -32,8 +32,8 @@ mode        : selfcontained # {standalone, draft}
 
 
 --- .dark .nobackground .quote
-# 2 分鐘背景知識
-### 2 minutes Linguistics
+# 1 分鐘背景知識
+### 1 minutes Linguistics
 
 
 ---
@@ -127,8 +127,6 @@ Can't you just use the transcription of Taiwanese sound to input 漢字 ?!?
 
 <img class='center'src="assets/img/taigiIME.png" alt="Drawing" style="width: 400px; height：200px"/>
 
-
-
 - sadly no pull requests yet
 - but quite a lot of feedback for a single man ! (I wish I had more time to spend on it)
 
@@ -148,21 +146,19 @@ Can't you just use the transcription of Taiwanese sound to input 漢字 ?!?
 <iframe width="60" height="50" src='assets/img/lopen.png' frameborder="0" allowfullscreen></iframe>
 
 
-
-
-
 --- .shout #demo
 
 # [DEMO: 開放語料系統](http://lopen.linguistics.ntu.edu.tw/copens) 
 
 <img class='center'src="assets/img/copens.png" alt="Drawing" style="width: 800px; height：250px"/>
 
+
 ---
 ## BIGLEX ：萌典的學伴（學界版）
 
 | **Module.Variable**        | **Description**                       |
 |---------------------|---------------------------------------|
-| `concept.sense`     | word sense number from [Chinese Wordnet, CWN](http://lope.linguistics.ntu.edu.tw/cwn/), please [help](http://lope.linguistics.ntu.edu.tw/cwikin/)       |
+| `concept.sense`     | word sense number from [Chinese Wordnet, CWN](http://lope.linguistics.ntu.edu.tw/cwn2/), please [help](http://lope.linguistics.ntu.edu.tw/cwikin/)       |
 | `concept.gloss`     | sense definitions from CWN    |
 | `concept.relations` | lexical semantic relations      |
 | `emotion.polarity`  | polarity of descriptive emotional words|
@@ -183,14 +179,16 @@ Can't you just use the transcription of Taiwanese sound to input 漢字 ?!?
 
 ## `BIGLEX`: Exploratory, Reproducible, Scaled
 
-<textarea class='interactive' id='interactive{{slide.num}}' data-cell='{{slide.num}}' data-results='asis' style='display:none'>require(googleVis)
-load("./mot/mot.RData")
-# head(convdata)
-# head(compdata)
-Modal <- gvisMotionChart(convdata, idvar="VERB", timeva="DECADE") 
-print(Modal, tag ='chart')
-plot(Modal) </textarea>
 
+```r
+# require(googleVis)
+# load("./mot/mot.RData")
+# # head(convdata)
+# # head(compdata)
+# Modal <- gvisMotionChart(convdata, idvar="VERB", timeva="DECADE") 
+# print(Modal, tag ='chart')
+# plot(Modal) 
+```
 
 
 
@@ -478,29 +476,10 @@ plot(Modal) </textarea>
 --- 
 ## 立委問政行為: PART II
 
+DEMO
 
-<div class="row-fluid">
-  <div class="span4">
-    <form class="well">
-      <label class="control-label" for="sex">Choose Sex</label>
-      <select id="sex"><option value="Male" selected>Male</option>
-<option value="Female">Female</option></select>
-      <script type="application/json" data-for="sex" data-nonempty="">{}</script>
-      <label class="control-label" for="type">Choose Type</label>
-      <select id="type"><option value="multiBarChart" selected>multiBarChart</option>
-<option value="multiBarHorizontalChart">multiBarHorizontalChart</option></select>
-      <script type="application/json" data-for="type" data-nonempty="">{}</script>
-    </form>
-  </div>
-  <div class="span8">
-    <div id="nvd3plot" class="shiny-html-output nvd3 rChart"></div>
-  </div>
-</div>
-
-
-
-
-
+* 用語言表達來觀察價值選擇，關心主題與立場。
+* `keyness` calculation
 
 
 ---
@@ -543,9 +522,11 @@ plot(Modal) </textarea>
 
 
 ---
-## 萌典學界版 
+## Social Labs 
 
-* 從詞典(dictionary) 詞庫 (lexicon) 詞網 (lex.network) 詞雲 (lex.cloud)
+* (語言學) 實驗室要放在社會發展的脈絡。
+
+* 詞典(dictionary) $\bowtie$ 詞庫 (lexicon) $\bowtie$ 詞網 (lex.network) $\bowtie$ 詞雲 (lex.cloud)
 
 <img class='center'src="assets/img/cwm.png" alt="Drawing" style="width: 450px; height：150px"/>
 
